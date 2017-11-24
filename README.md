@@ -49,7 +49,7 @@ Applies a `kCFStringTransformToUnicodeName` - `CFStringTransform` on a copy of t
 
 ```
 print("á".unicodeName) // \N{LATIN SMALL LETTER A WITH ACUTE}
-print("😜".unicodeName) // "\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}"
+print("😜".unicodeName) // \N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}
 ```
 
 #### var niceUnicodeName: String { get }
@@ -57,8 +57,8 @@ print("😜".unicodeName) // "\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}"
 Returns the result of a `kCFStringTransformToUnicodeName` - `CFStringTransform` with `\N{` prefixes and `}` suffixes removed
 
 ```
-print("á".unicodeName) // \N{LATIN SMALL LETTER A WITH ACUTE}
-print("😜".unicodeName) // "\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}"
+print("á".unicodeName) // LATIN SMALL LETTER A WITH ACUTE}
+print("😜".unicodeName) // FACE WITH STUCK-OUT TONGUE AND WINKING EYE
 ```
 
 ### Character
