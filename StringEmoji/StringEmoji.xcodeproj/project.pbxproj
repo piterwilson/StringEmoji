@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F28D62D1FC84F29002014F2 /* emojiCharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F28D62C1FC84F29002014F2 /* emojiCharacterSet.swift */; };
+		4F28D62F1FC85CF0002014F2 /* Character+Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F28D62E1FC85CF0002014F2 /* Character+Emoji.swift */; };
+		4F28D6311FC863C8002014F2 /* String+UnicodeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F28D6301FC863C8002014F2 /* String+UnicodeName.swift */; };
 		4F4E0F7F1FC484AC00856105 /* StringEmoji.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4E0F7D1FC484AC00856105 /* StringEmoji.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FF3ACA71FC4B1A600261779 /* String+Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3ACA51FC4B1A600261779 /* String+Emoji.swift */; };
-		4FF3ACA81FC4B1A600261779 /* String+EmojiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3ACA61FC4B1A600261779 /* String+EmojiList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F28D62C1FC84F29002014F2 /* emojiCharacterSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emojiCharacterSet.swift; sourceTree = "<group>"; };
+		4F28D62E1FC85CF0002014F2 /* Character+Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Emoji.swift"; sourceTree = "<group>"; };
+		4F28D6301FC863C8002014F2 /* String+UnicodeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UnicodeName.swift"; sourceTree = "<group>"; };
 		4F4E0F7A1FC484AC00856105 /* StringEmoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StringEmoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4E0F7D1FC484AC00856105 /* StringEmoji.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringEmoji.h; sourceTree = "<group>"; };
 		4F4E0F7E1FC484AC00856105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FF3ACA51FC4B1A600261779 /* String+Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Emoji.swift"; sourceTree = "<group>"; };
-		4FF3ACA61FC4B1A600261779 /* String+EmojiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+EmojiList.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F28D62B1FC84F29002014F2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4F28D62C1FC84F29002014F2 /* emojiCharacterSet.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		4F4E0F701FC484AC00856105 = {
 			isa = PBXGroup;
 			children = (
@@ -50,6 +62,7 @@
 		4F4E0F7C1FC484AC00856105 /* StringEmoji */ = {
 			isa = PBXGroup;
 			children = (
+				4F28D62B1FC84F29002014F2 /* Constants */,
 				4FF3ACA41FC4B1A600261779 /* Extensions */,
 				4F4E0F7D1FC484AC00856105 /* StringEmoji.h */,
 				4F4E0F7E1FC484AC00856105 /* Info.plist */,
@@ -61,7 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				4FF3ACA51FC4B1A600261779 /* String+Emoji.swift */,
-				4FF3ACA61FC4B1A600261779 /* String+EmojiList.swift */,
+				4F28D62E1FC85CF0002014F2 /* Character+Emoji.swift */,
+				4F28D6301FC863C8002014F2 /* String+UnicodeName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF3ACA71FC4B1A600261779 /* String+Emoji.swift in Sources */,
-				4FF3ACA81FC4B1A600261779 /* String+EmojiList.swift in Sources */,
+				4F28D6311FC863C8002014F2 /* String+UnicodeName.swift in Sources */,
+				4F28D62F1FC85CF0002014F2 /* Character+Emoji.swift in Sources */,
+				4F28D62D1FC84F29002014F2 /* emojiCharacterSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

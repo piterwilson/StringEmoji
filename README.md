@@ -1,5 +1,5 @@
 # StringEmoji
-A swift 3.0/4.0 String extension class to handle Emoji related tasks.
+A swift 4.0 String extension class to handle Emoji related tasks.
 
 ## CocoaPods installation
 
@@ -15,27 +15,49 @@ import StringEmoji
 
 ## Documentation
 
-### static var emojis: [String : String] { get }
+### Constants
 
-A Dictionary containing known emojis. Keys are single emoji characters and the value is the name of the corresponding emoji.
+#### let emojiCharacterSet: CharacterSet
 
-```
-print(String.emojis["😁"] as Any) // Optional("beaming face with smiling eyes")
-```
+Character set containing all known emoji (as described in official Unicode List 5.0 http://unicode.org/emoji/charts-5.0/emoji-list.html)
 
-### var isEmoji: Bool { get }
+### String
+
+#### var isEmoji: Bool { get }
 
 Whether or not the `String` instance represents a known single Emoji character
 
 ```
 print("".isEmoji) // false
 print("😁".isEmoji) // true
+print("😁😜".isEmoji) // false (String is not a single Emoji)
 ```
 
-### var emojiName: String? { get }
+#### var unicodeName: String { get }
 
-If the `String` represents a single Emoji character, the name of that Emoji, nil otherwise.
+Applies a `kCFStringTransformToUnicodeName` - `CFStringTransform` on a copy of the String
 
 ```
-print("😜".emojiName as Any) // Optional("winking face with tongue")
+print("á".unicodeName) // \N{LATIN SMALL LETTER A WITH ACUTE}
+print("😜".unicodeName) // "\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}"
+```
+
+#### var niceUnicodeName: String { get }
+
+Returns the result of a `kCFStringTransformToUnicodeName` - `CFStringTransform` with `\N{` prefixes and `}` suffixes removed
+
+```
+print("á".unicodeName) // \N{LATIN SMALL LETTER A WITH ACUTE}
+print("😜".unicodeName) // "\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}"
+```
+
+### Character
+
+#### var isEmoji: Bool { get }
+
+Whether or not the `Character` instance represents a known Emoji character
+
+```
+print("".isEmoji) // false
+print("😁".isEmoji) // true
 ```

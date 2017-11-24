@@ -13,8 +13,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("".isEmoji) // false
         print("😁".isEmoji) // true
-        print("😜".emojiName as Any) // Optional("winking face with tongue")
-        print(String.emojis["😁"] as Any) // Optional("beaming face with smiling eyes")
+        print("😁😜".isEmoji) // false
+        print("😁😜".containsEmoj) // true
+        print("á".unicodeName) // \N{LATIN SMALL LETTER A WITH ACUTE}
+        print("😜".unicodeName) // "\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}"
+        print("😜".niceUnicodeName) // "FACE WITH STUCK-OUT TONGUE AND WINKING EYE"
+        print("😁😜".unicodeName) // \N{GRINNING FACE WITH SMILING EYES}\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}
+        print("😁😜".niceUnicodeName) // GRINNING FACE WITH SMILING EYES FACE WITH STUCK-OUT TONGUE AND WINKING EYE
+        print("😜".first!.isEmoji) // true
     }
 }
 
