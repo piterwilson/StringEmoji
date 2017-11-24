@@ -33,6 +33,16 @@ print("😁".isEmoji) // true
 print("😁😜".isEmoji) // false (String is not a single Emoji)
 ```
 
+#### var containsEmoji: Bool { get }
+
+Whether or not the `String` instance contains a known Emoji character
+
+```
+print("".containsEmoji) // false
+print("😁".containsEmoji) // true
+print("😁😜".containsEmoji) // true
+```
+
 #### var unicodeName: String { get }
 
 Applies a `kCFStringTransformToUnicodeName` - `CFStringTransform` on a copy of the String
