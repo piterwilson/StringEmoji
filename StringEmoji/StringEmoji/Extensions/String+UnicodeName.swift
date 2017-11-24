@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
 
-    /// Applies a kCFStringTransformToUnicodeName CFStringTransform on a copy of the String
+    /// Applies a `kCFStringTransformToUnicodeName` - `CFStringTransform` on a copy of the String
     public var unicodeName: String {
         let cfstr:NSMutableString = NSMutableString(string: self) as CFMutableString
         var range:CFRange = CFRangeMake(0, CFStringGetLength(cfstr))
@@ -18,7 +18,7 @@ extension String {
         return String(cfstr)
     }
 
-    /// Returns the result of a kCFStringTransformToUnicodeName CFStringTransform with `\N{` prefix and '}' suffix removed
+    /// Returns the result of a `kCFStringTransformToUnicodeName` - `CFStringTransform` with `\N{` prefix and '}' suffixes removed
     public var niceUnicodeName: String {
         let result = unicodeName
         if self != result {
@@ -27,9 +27,9 @@ extension String {
         return unicodeName
     }
 
-    /// Loops trough each character in a String and strips `\N{` prefix and '}' suffix junk characters resulting from a kCFStringTransformToUnicodeName CFStringTransform
+    /// Loops trough each character in a String and strips `\N{` prefix and '}' suffix junk characters resulting from a `kCFStringTransformToUnicodeName` - `CFStringTransform`
     ///
-    /// - Returns: The result of a kCFStringTransformToUnicodeName CFStringTransform with `\N{` prefix and '}' suffix removed
+    /// - Returns: The result of a `kCFStringTransformToUnicodeName` - `CFStringTransform` with `\N{` prefix and '}' suffix removed
     private func unicodeJunkRemoved() -> String {
         if unicodeName != self {
             var out: [String] = []
