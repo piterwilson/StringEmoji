@@ -4,7 +4,7 @@ A swift 4.0 String extension class to handle Emoji related tasks.
 ## CocoaPods installation
 
 ```
-pod 'StringEmojiExtension', :git => 'https://github.com/piterwilson/StringEmoji.git'
+pod 'StringEmoji', :git => 'https://github.com/piterwilson/StringEmoji.git'
 ```
 
 ## Usage
