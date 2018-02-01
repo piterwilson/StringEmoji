@@ -9,7 +9,7 @@ import Foundation
 extension String {
 
     /// Whether or not the `String` instance contains an Emoji character
-    public var containsEmoj: Bool {
+    public var containsEmoji: Bool {
         if let _ = self.rangeOfCharacter(from: emojiCharacterSet) {
             return true
         }
@@ -18,7 +18,7 @@ extension String {
 
     /// Whether or not the `String` instance represents a known single Emoji character
     public var isEmoji: Bool {
-        return count == 1 && containsEmoj
+        return count == 1 && containsEmoji
     }
 
 }
