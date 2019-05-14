@@ -9,25 +9,45 @@ import UIKit
 import StringEmoji
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("".isEmoji) // false
-//        print("😁".isEmoji) // true
-//        print("😁😜".isEmoji) // false
-//        print("😁😜".containsEmoji) // true
-//        print("á".unicodeName) // \N{LATIN SMALL LETTER A WITH ACUTE}
-//        print("😜".unicodeName) // "\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}"
-//        print("😜".niceUnicodeName) // "FACE WITH STUCK-OUT TONGUE AND WINKING EYE"
-//        print("😁😜".unicodeName) // \N{GRINNING FACE WITH SMILING EYES}\N{FACE WITH STUCK-OUT TONGUE AND WINKING EYE}
-//        print("😁😜".niceUnicodeName) // GRINNING FACE WITH SMILING EYES FACE WITH STUCK-OUT TONGUE AND WINKING EYE
-        print("😜".first!.isEmoji) // true
-        print("😜".isEmoji) // true
-        print("012345".containsEmoji) // false
-        print("012345".first!.isEmoji) // false
-        let string = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{};'\\:|,./<>?"
-        for char in string {
-            print("\(char).isEmoji \(char.isEmoji)")
-        }
+        setupTitle()
+        setupTableView()
     }
+    
+    private func setupTitle() {
+        self.title = "Emoji Unicode List 5.0 "
+    }
+    
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Emoji.all.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StringEmojiExampleCell") else {
+            fatalError()
+        }
+        guard let emojiLabel: UILabel = cell.viewWithTag(1) as? UILabel, let descriptionLabel: UILabel = cell.viewWithTag(2) as? UILabel else {
+            fatalError()
+        }
+        emojiLabel.text = Emoji.all[indexPath.row]
+        descriptionLabel.text = Emoji.all[indexPath.row].niceUnicodeName
+        return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    
 }
 

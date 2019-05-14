@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "StringEmoji"
-  s.version      = "1.2"
-  s.summary      = "A swift 4.0 String extension class to handle Emoji related tasks."
+  s.version      = "1.3"
+  s.summary      = "A swift 5.0 String extension class to handle Emoji related tasks."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,12 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    A swift 4.0 String extension class to handle Emoji related tasks.
+                    A swift 5.0 String extension class to handle Emoji related tasks.
                    DESC
 
   s.homepage     = "http://www.piterwilson.com"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -65,7 +63,6 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"

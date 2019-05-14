@@ -13,20 +13,8 @@
 		4F4E0F661FC4839200856105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4E0F651FC4839200856105 /* Assets.xcassets */; };
 		4F4E0F691FC4839200856105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4E0F671FC4839200856105 /* LaunchScreen.storyboard */; };
 		4F4E0F891FC485F700856105 /* StringEmoji.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4F4E0F871FC4859500856105 /* StringEmoji.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4FE1A5C820234CF600CDFB25 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE1A5C720234CF600CDFB25 /* ExampleTests.swift */; };
 		4FE1A5D02023539800CDFB25 /* StringEmoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F80F522202341BD00AB52CF /* StringEmoji.framework */; };
-		4FE1A5D12023546600CDFB25 /* StringEmoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F80F522202341BD00AB52CF /* StringEmoji.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4FE1A5CA20234CF600CDFB25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4F4E0F531FC4839200856105 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F4E0F5A1FC4839200856105;
-			remoteInfo = Example;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4F4E0F881FC485E200856105 /* CopyFiles */ = {
@@ -51,9 +39,6 @@
 		4F4E0F6A1FC4839200856105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F4E0F871FC4859500856105 /* StringEmoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringEmoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F80F522202341BD00AB52CF /* StringEmoji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringEmoji.framework; path = "../../../Library/Developer/Xcode/DerivedData/StringEmoji-dowxxvvtepjnciaebxpcfkondnkw/Build/Products/Debug-iphonesimulator/StringEmoji.framework"; sourceTree = "<group>"; };
-		4FE1A5C520234CF600CDFB25 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FE1A5C720234CF600CDFB25 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
-		4FE1A5C920234CF600CDFB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,14 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FE1A5C220234CF600CDFB25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FE1A5D12023546600CDFB25 /* StringEmoji.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				4F4E0F5D1FC4839200856105 /* Example */,
-				4FE1A5C620234CF600CDFB25 /* ExampleTests */,
 				4F4E0F5C1FC4839200856105 /* Products */,
 				4F4E0F851FC4859500856105 /* Frameworks */,
 			);
@@ -90,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				4F4E0F5B1FC4839200856105 /* Example.app */,
-				4FE1A5C520234CF600CDFB25 /* ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,15 +92,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4FE1A5C620234CF600CDFB25 /* ExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				4FE1A5C720234CF600CDFB25 /* ExampleTests.swift */,
-				4FE1A5C920234CF600CDFB25 /* Info.plist */,
-			);
-			path = ExampleTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,24 +113,6 @@
 			productReference = 4F4E0F5B1FC4839200856105 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4FE1A5C420234CF600CDFB25 /* ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4FE1A5CE20234CF600CDFB25 /* Build configuration list for PBXNativeTarget "ExampleTests" */;
-			buildPhases = (
-				4FE1A5C120234CF600CDFB25 /* Sources */,
-				4FE1A5C220234CF600CDFB25 /* Frameworks */,
-				4FE1A5C320234CF600CDFB25 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4FE1A5CB20234CF600CDFB25 /* PBXTargetDependency */,
-			);
-			name = ExampleTests;
-			productName = ExampleTests;
-			productReference = 4FE1A5C520234CF600CDFB25 /* ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,18 +120,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Piterwilson;
 				TargetAttributes = {
 					4F4E0F5A1FC4839200856105 = {
 						CreatedOnToolsVersion = 9.1;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
-					};
-					4FE1A5C420234CF600CDFB25 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 4F4E0F5A1FC4839200856105;
 					};
 				};
 			};
@@ -201,7 +144,6 @@
 			projectRoot = "";
 			targets = (
 				4F4E0F5A1FC4839200856105 /* Example */,
-				4FE1A5C420234CF600CDFB25 /* ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,13 +159,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FE1A5C320234CF600CDFB25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -236,23 +171,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FE1A5C120234CF600CDFB25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FE1A5C820234CF600CDFB25 /* ExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4FE1A5CB20234CF600CDFB25 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4F4E0F5A1FC4839200856105 /* Example */;
-			targetProxy = 4FE1A5CA20234CF600CDFB25 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4F4E0F621FC4839200856105 /* Main.storyboard */ = {
@@ -288,6 +207,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -295,6 +215,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -345,6 +266,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -352,6 +274,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -393,9 +316,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.piterwilson.StringEmoji.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "$(ARCHS_STANDARD) ";
 			};
 			name = Debug;
 		};
@@ -411,43 +335,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.piterwilson.StringEmoji.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		4FE1A5CC20234CF600CDFB25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BA7PGZ44F;
-				INFOPLIST_FILE = ExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.piterwilson.ExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-			};
-			name = Debug;
-		};
-		4FE1A5CD20234CF600CDFB25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BA7PGZ44F;
-				INFOPLIST_FILE = ExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.piterwilson.ExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+				VALID_ARCHS = "$(ARCHS_STANDARD) ";
 			};
 			name = Release;
 		};
@@ -468,15 +359,6 @@
 			buildConfigurations = (
 				4F4E0F6E1FC4839200856105 /* Debug */,
 				4F4E0F6F1FC4839200856105 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4FE1A5CE20234CF600CDFB25 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4FE1A5CC20234CF600CDFB25 /* Debug */,
-				4FE1A5CD20234CF600CDFB25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
