@@ -30,39 +30,38 @@ class StringEmojiTests: XCTestCase {
     }
     
     func testWhenStringNotEmoji_IsEmojiIsFalse() {
-        for char in nonEmojiNumbersString {
-            XCTAssertFalse(String(char).isEmoji, "\(char) is not an emoji!")
+        for character in nonEmojiNumbersString {
+            XCTAssertFalse(String(character).isEmoji, "\(character) is not an emoji!")
         }
-        for char in nonEmojiAlphaString {
-            XCTAssertFalse(String(char).isEmoji, "\(char) is not an emoji!")
+        for character in nonEmojiAlphaString {
+            XCTAssertFalse(String(character).isEmoji, "\(character) is not an emoji!")
         }
-        for char in nonEmojistringSpecialCharacters {
-            XCTAssertFalse(String(char).isEmoji, "\(char) is not an emoji!")
+        for character in nonEmojistringSpecialCharacters {
+            XCTAssertFalse(String(character).isEmoji, "\(character) is not an emoji!")
         }
     }
     
     func testWhenCharacterNotEmojiSpecialChars_isEmojiIsFalse() {
-        for char in nonEmojiNumbersString {
-            XCTAssertFalse(char.isEmoji, "\(char) is not an emoji!")
+        for character in nonEmojiNumbersString {
+            XCTAssertFalse(character.isEmoji, "\(character) is not an emoji!")
         }
-        for char in nonEmojiAlphaString {
-            XCTAssertFalse(char.isEmoji, "\(char) is not an emoji!")
+        for character in nonEmojiAlphaString {
+            XCTAssertFalse(character.isEmoji, "\(character) is not an emoji!")
         }
-        for char in nonEmojistringSpecialCharacters {
-            XCTAssertFalse(char.isEmoji, "\(char) is not an emoji!")
+        for character in nonEmojistringSpecialCharacters {
+            XCTAssertFalse(character.isEmoji, "\(character) is not an emoji!")
         }
     }
     
     func testWhenCharacterIsEmoji_isEmojiIsTrue() {
-        for char in emojiString {
-            XCTAssertTrue(char.isEmoji, "\(char) is an emoji!")
+        for character in emojiString {
+            XCTAssertTrue(character.isEmoji, "\(character) is an emoji!")
         }
     }
     
     func testWhenStringSingleCharacterIsEmoji_isEmojiIsTrue() {
-        for char in emojiString {
-            print(" XCTAssertEquals(\(String(char)).niceUnicodeName, \(String(char).niceUnicodeName))")
-            XCTAssertTrue(String(char).isEmoji, "\(char) is an emoji!")
+        for character in emojiString {
+            XCTAssertTrue(String(character).isEmoji, "\(character) is an emoji!")
         }
     }
     
@@ -71,10 +70,10 @@ class StringEmojiTests: XCTestCase {
     }
     
     func testNiceUnicodeNameDoesntContainNotNiceCharacters() {
-        for char in emojiString {
-            let string = String(char).niceUnicodeName
-            XCTAssertFalse(string.contains("\\N{"), "\(string)'s niceUnicodeName contains not nice character")
-            XCTAssertFalse(string.contains("}"), "\(string)'s niceUnicodeName contains not nice character")
+        for character in emojiString {
+            let niceUnicodeNameString = String(character).niceUnicodeName
+            XCTAssertFalse(niceUnicodeNameString.contains("\\N{"), "\(character)'s niceUnicodeName: \(niceUnicodeNameString) contains not nice character")
+            XCTAssertFalse(niceUnicodeNameString.contains("}"), "\(character)'s niceUnicodeName: \(niceUnicodeNameString) contains not nice character")
         }
     }
 }
