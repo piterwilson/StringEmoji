@@ -10,7 +10,7 @@ extension String {
 
     /// Whether or not the `String` instance contains an Emoji character
     public var containsEmoji: Bool {
-        if let _ = self.rangeOfCharacter(from: emojiCharacterSet) {
+        if let _ = self.rangeOfCharacter(from: Emoji.characterSet) {
             return true
         }
         return false
