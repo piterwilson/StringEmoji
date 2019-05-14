@@ -12,8 +12,8 @@ extension String {
 
     /// Applies a `kCFStringTransformToUnicodeName` - `CFStringTransform` on a copy of the String
     public var unicodeName: String {
-        let cfstr:NSMutableString = NSMutableString(string: self) as CFMutableString
-        var range:CFRange = CFRangeMake(0, CFStringGetLength(cfstr))
+        let cfstr: NSMutableString = NSMutableString(string: self) as CFMutableString
+        var range: CFRange = CFRangeMake(0, CFStringGetLength(cfstr))
         CFStringTransform(cfstr, &range, kCFStringTransformToUnicodeName, false)
         return String(cfstr)
     }
