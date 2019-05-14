@@ -61,11 +61,20 @@ class StringEmojiTests: XCTestCase {
     
     func testWhenStringSingleCharacterIsEmoji_isEmojiIsTrue() {
         for char in emojiString {
+            print(" XCTAssertEquals(\(String(char)).niceUnicodeName, \(String(char).niceUnicodeName))")
             XCTAssertTrue(String(char).isEmoji, "\(char) is an emoji!")
         }
     }
     
     func testWhenStringMultipleCharacterIsEmoji_IsEmojiIsFalse() {
         XCTAssertFalse(emojiString.isEmoji, "emojiString is not a single emoji")
+    }
+    
+    func testNiceUnicodeNameDoesntContainNotNiceCharacters() {
+        for char in emojiString {
+            let string = String(char).niceUnicodeName
+            XCTAssertFalse(string.contains("\\N{"), "\(string)'s niceUnicodeName contains not nice character")
+            XCTAssertFalse(string.contains("}"), "\(string)'s niceUnicodeName contains not nice character")
+        }
     }
 }
