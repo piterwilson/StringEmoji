@@ -1,5 +1,5 @@
 # StringEmoji
-A swift 4.0 String extension class to handle Emoji related tasks.
+A swift 5.0 String extension class to handle Emoji related tasks.
 
 ## CocoaPods installation
 
