@@ -15,11 +15,17 @@ import StringEmoji
 
 ## Documentation
 
-### Constants
+### Emoji
 
-#### let emojiCharacterSet: CharacterSet
+A Class that contains properties that list emoji characters.
+
+#### static let characterSet: CharacterSet
 
 Character set containing all known emoji (as described in official Unicode List 5.0 http://unicode.org/emoji/charts-5.0/emoji-list.html)
+
+#### static let all: [String]
+
+Array containing all known emoji (as described in official Unicode List 5.0 http://unicode.org/emoji/charts-5.0/emoji-list.html)
 
 ### String
 
