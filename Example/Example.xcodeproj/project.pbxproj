@@ -39,8 +39,6 @@
 		4F4E0F6A1FC4839200856105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F4E0F871FC4859500856105 /* StringEmoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StringEmoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F80F522202341BD00AB52CF /* StringEmoji.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringEmoji.framework; path = "../../../Library/Developer/Xcode/DerivedData/StringEmoji-dowxxvvtepjnciaebxpcfkondnkw/Build/Products/Debug-iphonesimulator/StringEmoji.framework"; sourceTree = "<group>"; };
-		4FE1A5C720234CF600CDFB25 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
-		4FE1A5C920234CF600CDFB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				4F4E0F5D1FC4839200856105 /* Example */,
-				4FE1A5C620234CF600CDFB25 /* ExampleTests */,
 				4F4E0F5C1FC4839200856105 /* Products */,
 				4F4E0F851FC4859500856105 /* Frameworks */,
 			);
@@ -93,15 +90,6 @@
 				4F4E0F871FC4859500856105 /* StringEmoji.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4FE1A5C620234CF600CDFB25 /* ExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				4FE1A5C720234CF600CDFB25 /* ExampleTests.swift */,
-				4FE1A5C920234CF600CDFB25 /* Info.plist */,
-			);
-			path = ExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
