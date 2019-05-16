@@ -15,19 +15,7 @@ import StringEmoji
 
 ## Documentation
 
-### Emoji
-
-A Class that contains properties that list emoji characters.
-
-#### static let characterSet: CharacterSet
-
-Character set containing all known emoji (as described in official Unicode List 5.0 http://unicode.org/emoji/charts-5.0/emoji-list.html)
-
-#### static let all: [String]
-
-Array containing all known emoji (as described in official Unicode List 5.0 http://unicode.org/emoji/charts-5.0/emoji-list.html)
-
-### String
+### String extensions
 
 #### var isEmoji: Bool { get }
 
@@ -67,7 +55,7 @@ print("á".unicodeName) // LATIN SMALL LETTER A WITH ACUTE}
 print("😜".unicodeName) // FACE WITH STUCK-OUT TONGUE AND WINKING EYE
 ```
 
-### Character
+### Character extensions
 
 #### var isEmoji: Bool { get }
 
@@ -77,3 +65,15 @@ Whether or not the `Character` instance represents a known Emoji character
 print("".isEmoji) // false
 print("😁".isEmoji) // true
 ```
+
+### Emoji
+
+A struct that contains properties that list emoji characters.
+
+#### static let characterSet: CharacterSet
+
+Character set containing all known emoji (as described in official Unicode List 5.0 http://unicode.org/emoji/charts-5.0/emoji-list.html)
+
+#### static let all: [String]
+
+Array containing all known emoji (as described in official Unicode List 5.0 http://unicode.org/emoji/charts-5.0/emoji-list.html)
