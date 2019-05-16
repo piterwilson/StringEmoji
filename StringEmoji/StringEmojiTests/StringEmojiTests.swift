@@ -58,6 +58,14 @@ class StringEmojiTests: XCTestCase {
         }
     }
     
+    func testMeasurePerformance() {
+        measure {
+            for character in emojiString {
+                XCTAssertTrue(character.isEmoji, "\(character) is an emoji!")
+            }
+        }
+    }
+    
     func testWhenStringSingleCharacterIsEmoji_isEmojiIsTrue() {
         for character in emojiString {
             XCTAssertTrue(String(character).isEmoji, "\(character) is an emoji!")
